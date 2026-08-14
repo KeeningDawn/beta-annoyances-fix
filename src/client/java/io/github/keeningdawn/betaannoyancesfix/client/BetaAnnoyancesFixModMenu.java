@@ -37,7 +37,7 @@ public class BetaAnnoyancesFixModMenu implements ModMenuApi {
           ConfigBuilder.create()
               .setParentScreen(parent)
               .setTitle(Component.translatable("beta-annoyances-fix.config.title"))
-              .transparentBackground()
+              .solidBackground()
               .setSavingRunnable(config::save);
 
       ConfigEntryBuilder entryBuilder = builder.entryBuilder();
@@ -45,55 +45,87 @@ public class BetaAnnoyancesFixModMenu implements ModMenuApi {
           builder.getOrCreateCategory(
               Component.translatable("beta-annoyances-fix.config.category.stack_sizes"));
 
-      addOption(
+      // toggles first, alphabetized by display name
+      addToggle(entryBuilder, general, "beta-annoyances-fix.config.bread_stack", config.breadStack);
+      addToggle(
           entryBuilder,
           general,
-          "beta-annoyances-fix.config.cookie_stack",
-          config.cookieStack,
-          List.of("minecraft:cookie", "minecraft:quartz"));
-      addOption(
+          "beta-annoyances-fix.config.cooked_cod_stack",
+          config.cookedCodStack);
+      addToggle(
+          entryBuilder,
+          general,
+          "beta-annoyances-fix.config.cooked_porkchop_stack",
+          config.cookedPorkchopStack);
+      addToggle(
+          entryBuilder, general, "beta-annoyances-fix.config.cookie_stack", config.cookieStack);
+      addToggle(entryBuilder, general, "beta-annoyances-fix.config.egg_stack", config.eggStack);
+      addToggle(entryBuilder, general, "beta-annoyances-fix.config.door_stack", config.doorStack);
+      addToggle(entryBuilder, general, "beta-annoyances-fix.config.sign_stack", config.signStack);
+      addToggle(
+          entryBuilder, general, "beta-annoyances-fix.config.raw_cod_stack", config.rawCodStack);
+      addToggle(
+          entryBuilder,
+          general,
+          "beta-annoyances-fix.config.raw_porkchop_stack",
+          config.rawPorkchopStack);
+
+      // item id lists below, same alphabetized order (only the ones that support alternate ids)
+      addItemList(
           entryBuilder,
           general,
           "beta-annoyances-fix.config.bread_stack",
           config.breadStack,
           List.of("minecraft:bread", "minecraft:nautilus_shell"));
-      addOption(
-          entryBuilder,
-          general,
-          "beta-annoyances-fix.config.raw_cod_stack",
-          config.rawCodStack,
-          List.of("minecraft:cod", "minecraft:rabbit_foot"));
-      addOption(
+      addItemList(
           entryBuilder,
           general,
           "beta-annoyances-fix.config.cooked_cod_stack",
           config.cookedCodStack,
           List.of("minecraft:cooked_cod", "minecraft:rabbit_hide"));
-      addOption(
-          entryBuilder,
-          general,
-          "beta-annoyances-fix.config.raw_porkchop_stack",
-          config.rawPorkchopStack,
-          List.of("minecraft:porkchop", "minecraft:fermented_spider_eye"));
-      addOption(
+      addItemList(
           entryBuilder,
           general,
           "beta-annoyances-fix.config.cooked_porkchop_stack",
           config.cookedPorkchopStack,
           List.of("minecraft:cooked_porkchop", "minecraft:nether_brick"));
-      addOption(
-          entryBuilder, general, "beta-annoyances-fix.config.egg_stack", config.eggStack, null);
-      addOption(
-          entryBuilder, general, "beta-annoyances-fix.config.sign_stack", config.signStack, null);
-      addOption(
-          entryBuilder, general, "beta-annoyances-fix.config.door_stack", config.doorStack, null);
+      addItemList(
+          entryBuilder,
+          general,
+          "beta-annoyances-fix.config.cookie_stack",
+          config.cookieStack,
+          List.of("minecraft:cookie", "minecraft:quartz"));
+      addItemList(
+          entryBuilder,
+          general,
+          "beta-annoyances-fix.config.raw_cod_stack",
+          config.rawCodStack,
+          List.of("minecraft:cod", "minecraft:rabbit_foot"));
+      addItemList(
+          entryBuilder,
+          general,
+          "beta-annoyances-fix.config.raw_porkchop_stack",
+          config.rawPorkchopStack,
+          List.of("minecraft:porkchop", "minecraft:fermented_spider_eye"));
 
       return builder.build();
     };
   }
 
-  // defaultItemIds null means the item has no configurable alternate ids, just the toggle
-  private static void addOption(
+  private static void addToggle(
+      ConfigEntryBuilder entryBuilder,
+      ConfigCategory category,
+      String key,
+      StackSizeOption option) {
+    category.addEntry(
+        entryBuilder
+            .startBooleanToggle(Component.translatable(key), option.enabled)
+            .setDefaultValue(true)
+            .setSaveConsumer(value -> option.enabled = value)
+            .build());
+  }
+
+  private static void addItemList(
       ConfigEntryBuilder entryBuilder,
       ConfigCategory category,
       String key,
@@ -101,18 +133,9 @@ public class BetaAnnoyancesFixModMenu implements ModMenuApi {
       List<String> defaultItemIds) {
     category.addEntry(
         entryBuilder
-            .startBooleanToggle(Component.translatable(key), option.enabled)
-            .setDefaultValue(true)
-            .setSaveConsumer(value -> option.enabled = value)
+            .startStrList(Component.translatable(key + ".ids"), option.itemIds)
+            .setDefaultValue(defaultItemIds)
+            .setSaveConsumer(value -> option.itemIds = new ArrayList<>(value))
             .build());
-
-    if (defaultItemIds != null) {
-      category.addEntry(
-          entryBuilder
-              .startStrList(Component.translatable(key + ".ids"), option.itemIds)
-              .setDefaultValue(defaultItemIds)
-              .setSaveConsumer(value -> option.itemIds = new ArrayList<>(value))
-              .build());
-    }
   }
 }
