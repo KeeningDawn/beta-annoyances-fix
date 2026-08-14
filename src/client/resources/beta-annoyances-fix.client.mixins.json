@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "io.github.keeningdawn.betaannoyancesfix.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"StackSizeMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

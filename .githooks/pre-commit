@@ -1,0 +1,9 @@
+#!/bin/sh
+# Formats staged Java files with spotless before commit.
+
+staged_java=$(git diff --cached --name-only --diff-filter=ACM -- '*.java')
+
+if [ -n "$staged_java" ]; then
+	./gradlew spotlessApply -q
+	echo "$staged_java" | xargs git add
+fi

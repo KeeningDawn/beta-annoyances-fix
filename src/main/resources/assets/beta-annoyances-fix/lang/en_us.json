@@ -1,0 +1,20 @@
+{
+  "beta-annoyances-fix.config.title": "Beta Annoyances Fix",
+  "beta-annoyances-fix.config.category.stack_sizes": "Stack Sizes",
+
+  "beta-annoyances-fix.config.cookie_stack": "Cookie Stack Size (8)",
+  "beta-annoyances-fix.config.cookie_stack.ids": "Cookie Item IDs",
+  "beta-annoyances-fix.config.bread_stack": "Bread Stack Size (1)",
+  "beta-annoyances-fix.config.bread_stack.ids": "Bread Item IDs",
+  "beta-annoyances-fix.config.raw_cod_stack": "Raw Cod Stack Size (1)",
+  "beta-annoyances-fix.config.raw_cod_stack.ids": "Raw Cod Item IDs",
+  "beta-annoyances-fix.config.cooked_cod_stack": "Cooked Cod Stack Size (1)",
+  "beta-annoyances-fix.config.cooked_cod_stack.ids": "Cooked Cod Item IDs",
+  "beta-annoyances-fix.config.raw_porkchop_stack": "Raw Porkchop Stack Size (1)",
+  "beta-annoyances-fix.config.raw_porkchop_stack.ids": "Raw Porkchop Item IDs",
+  "beta-annoyances-fix.config.cooked_porkchop_stack": "Cooked Porkchop Stack Size (1)",
+  "beta-annoyances-fix.config.cooked_porkchop_stack.ids": "Cooked Porkchop Item IDs",
+  "beta-annoyances-fix.config.egg_stack": "Egg Stack Size (16)",
+  "beta-annoyances-fix.config.sign_stack": "Oak Sign Stack Size (1)",
+  "beta-annoyances-fix.config.door_stack": "Oak Door Stack Size (1)"
+}
