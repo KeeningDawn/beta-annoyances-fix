@@ -30,6 +30,7 @@ public class BetaAnnoyancesFix implements ModInitializer {
   @Override
   public void onInitialize() {
     BetaAnnoyancesFixConfig.load();
+    LOGGER.info("Beta Annoyances Fix initialized!");
   }
 
   public static Identifier id(String path) {

@@ -42,10 +42,13 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
-	modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
-	modImplementation("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
-		exclude(group: "net.fabricmc.fabric-api")
-	}
+	// ModMenu, optional integration only, not bundled or required at runtime for users.
+	modCompileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+	modRuntimeOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+	// Cloth Config, bundled via include() so users don't need to install it separately.
+	def clothConfig = modImplementation("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}")
+	clothConfig.exclude(group: "net.fabricmc.fabric-api")
+	include clothConfig
 }
 
 processResources {

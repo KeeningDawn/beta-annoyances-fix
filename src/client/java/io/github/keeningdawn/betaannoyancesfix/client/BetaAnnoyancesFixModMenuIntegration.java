@@ -27,7 +27,7 @@ import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import net.minecraft.network.chat.Component;
 
-public class BetaAnnoyancesFixModMenu implements ModMenuApi {
+public class BetaAnnoyancesFixModMenuIntegration implements ModMenuApi {
   @Override
   public ConfigScreenFactory<?> getModConfigScreenFactory() {
     return parent -> {
