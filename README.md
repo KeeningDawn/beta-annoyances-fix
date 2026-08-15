@@ -28,5 +28,7 @@ All fixes are individually toggleable in the config screen if Mod Menu is instal
 - Slabs can only be placed on the bottom half of a block.
 - Stairs can only be placed upright, and never form corners.
 - Fences can only connect to other fences.
+- Levers cannot be placed on the top or bottom of a block.
+- Buttons cannot be placed on the top or bottom of a block.
 - Grass cannot be flattened into paths.
 - Items can no longer be moved to the off-hand slot.

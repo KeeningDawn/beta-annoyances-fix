@@ -9,6 +9,8 @@
 		"StairPlacementMixin",
 		"FenceConnectionMixin",
 		"LogPlacementMixin",
+		"LeverPlacementMixin",
+		"ButtonPlacementMixin",
 		"AxeStrippingMixin",
 		"ShovelPathMixin",
 		"OffhandSwapKeybindMixin",

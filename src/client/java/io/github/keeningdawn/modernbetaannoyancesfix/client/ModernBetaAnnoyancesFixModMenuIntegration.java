@@ -23,11 +23,16 @@ import java.util.function.Consumer;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.network.chat.Component;
 
 public class ModernBetaAnnoyancesFixModMenuIntegration implements ModMenuApi {
   @Override
   public ConfigScreenFactory<?> getModConfigScreenFactory() {
+    // Cloth Config is an optional dependency, no config screen without it.
+    if (!FabricLoader.getInstance().isModLoaded("cloth-config")) {
+      return null;
+    }
     return parent -> {
       ModernBetaAnnoyancesFixConfig config = ModernBetaAnnoyancesFixConfig.get();
 
@@ -113,9 +118,21 @@ public class ModernBetaAnnoyancesFixModMenuIntegration implements ModMenuApi {
       addToggle(
           entryBuilder,
           placementAndInteraction,
+          "modern-beta-annoyances-fix.config.button_placement",
+          config.buttonPlacementEnabled,
+          v -> config.buttonPlacementEnabled = v);
+      addToggle(
+          entryBuilder,
+          placementAndInteraction,
           "modern-beta-annoyances-fix.config.fence_connection",
           config.fenceConnectionEnabled,
           v -> config.fenceConnectionEnabled = v);
+      addToggle(
+          entryBuilder,
+          placementAndInteraction,
+          "modern-beta-annoyances-fix.config.lever_placement",
+          config.leverPlacementEnabled,
+          v -> config.leverPlacementEnabled = v);
       addToggle(
           entryBuilder,
           placementAndInteraction,

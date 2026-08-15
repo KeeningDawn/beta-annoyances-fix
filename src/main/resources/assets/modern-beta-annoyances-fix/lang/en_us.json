@@ -18,6 +18,8 @@
   "modern-beta-annoyances-fix.config.stair_placement": "Restrict Stair Placement",
   "modern-beta-annoyances-fix.config.fence_connection": "Restrict Fence Connections",
   "modern-beta-annoyances-fix.config.log_placement": "Restrict Log Placement",
+  "modern-beta-annoyances-fix.config.lever_placement": "Restrict Lever Placement",
+  "modern-beta-annoyances-fix.config.button_placement": "Restrict Button Placement",
   "modern-beta-annoyances-fix.config.axe_stripping": "Disable Axe Stripping",
   "modern-beta-annoyances-fix.config.shovel_path": "Disable Shovel Flattening",
   "modern-beta-annoyances-fix.config.offhand": "Disable Offhand"

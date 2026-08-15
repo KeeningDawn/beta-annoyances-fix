@@ -46,6 +46,8 @@ public class ModernBetaAnnoyancesFixConfig {
   public boolean stairPlacementEnabled = true;
   public boolean fenceConnectionEnabled = true;
   public boolean logPlacementEnabled = true;
+  public boolean leverPlacementEnabled = true;
+  public boolean buttonPlacementEnabled = true;
   public boolean axeStrippingDisabled = true;
   public boolean shovelPathDisabled = true;
   public boolean offhandDisabled = true;
