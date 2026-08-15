@@ -2,7 +2,9 @@
 
 ## Purpose
 
-Playing on Modern Beta (a server that emulates Beta 1.7.3 mechanics) with a modern-version client has some leftover annoyances that can't be properly fixed without a mod. These are gaps Modern Beta's own server-side enforcement doesn't cover, so the client and server disagree, causing wasted actions, phantom placements, and other desyncs. Some of these are hard to notice unless you're using other mods (e.g. ClientSort), but they're annoying enough to warrant fixes anyway.
+When playing on Modern Beta (a server that emulates Beta 1.7.3) or other similar servers with a modern-version client, there are some leftover annoyances that can't be fixed properly without a client mod. This is especially true if you use a singleplayer creative building world, as your client is not enforcing even the most basic beta building mechanics. Admittedly when playing on the server most of these annoyances are very minor (temporary visual desyncs / ghost placements), but some issues can affect other mods (e.g; ClientSort). In either case, they were annoying enough that I wanted to fix them.
+
+As an additional bonus, these fixes also apply to singleplayer: meaning it's far more reliable / practical to use a singleplayer creative world and port builds over. No more fighting against slabs/stairs/trapdoors to follow beta rules!
 
 *Not affiliated with or endorsed by Modern Beta LLC. Modern Beta and related trademarks are the property of their respective owners.*
 
