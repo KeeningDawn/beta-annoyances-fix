@@ -1,0 +1,24 @@
+{
+  "modern-beta-annoyances-fix.config.title": "Modern Beta Annoyances Fix",
+  "modern-beta-annoyances-fix.config.category.stack_sizes": "Classic Stack Sizes",
+  "modern-beta-annoyances-fix.config.category.placement_and_interaction": "Placements & Interactions",
+
+  "modern-beta-annoyances-fix.config.cookie_stack": "Enforce Cookie Stack Size (8)",
+  "modern-beta-annoyances-fix.config.bread_stack": "Enforce Bread Stack Size (1)",
+  "modern-beta-annoyances-fix.config.raw_cod_stack": "Enforce Raw Fish Stack Size (1)",
+  "modern-beta-annoyances-fix.config.cooked_cod_stack": "Enforce Cooked Fish Stack Size (1)",
+  "modern-beta-annoyances-fix.config.raw_porkchop_stack": "Enforce Raw Porkchop Stack Size (1)",
+  "modern-beta-annoyances-fix.config.cooked_porkchop_stack": "Enforce Cooked Porkchop Stack Size (1)",
+  "modern-beta-annoyances-fix.config.egg_stack": "Enforce Egg Stack Size (16)",
+  "modern-beta-annoyances-fix.config.sign_stack": "Enforce Oak Sign Stack Size (1)",
+  "modern-beta-annoyances-fix.config.door_stack": "Enforce Oak Door Stack Size (1)",
+
+  "modern-beta-annoyances-fix.config.trapdoor_placement": "Restrict Trapdoor Placement",
+  "modern-beta-annoyances-fix.config.slab_placement": "Restrict Slab Placement",
+  "modern-beta-annoyances-fix.config.stair_placement": "Restrict Stair Placement",
+  "modern-beta-annoyances-fix.config.fence_connection": "Restrict Fence Connections",
+  "modern-beta-annoyances-fix.config.log_placement": "Restrict Log Placement",
+  "modern-beta-annoyances-fix.config.axe_stripping": "Disable Axe Stripping",
+  "modern-beta-annoyances-fix.config.shovel_path": "Disable Shovel Flattening",
+  "modern-beta-annoyances-fix.config.offhand": "Disable Offhand"
+}

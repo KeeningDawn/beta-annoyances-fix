@@ -14,18 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
-package io.github.keeningdawn.betaannoyancesfix.config;
+package io.github.keeningdawn.modernbetaannoyancesfix.client;
 
-import java.util.ArrayList;
-import java.util.List;
+import net.fabricmc.api.ClientModInitializer;
 
-public class StackSizeOption {
-  public boolean enabled = true;
-  public int stackSize;
-  public List<String> itemIds;
-
-  public StackSizeOption(int stackSize, String... itemIds) {
-    this.stackSize = stackSize;
-    this.itemIds = new ArrayList<>(List.of(itemIds));
-  }
+public class ModernBetaAnnoyancesFixClient implements ClientModInitializer {
+  @Override
+  public void onInitializeClient() {}
 }

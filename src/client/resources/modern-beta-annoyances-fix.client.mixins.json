@@ -1,0 +1,24 @@
+{
+	"required": true,
+	"package": "io.github.keeningdawn.modernbetaannoyancesfix.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"StackSizeMixin",
+		"TrapdoorPlacementMixin",
+		"SlabPlacementMixin",
+		"StairPlacementMixin",
+		"FenceConnectionMixin",
+		"LogPlacementMixin",
+		"AxeStrippingMixin",
+		"ShovelPathMixin",
+		"OffhandSwapKeybindMixin",
+		"OffhandSlotMixin",
+		"OffhandKeybindListMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

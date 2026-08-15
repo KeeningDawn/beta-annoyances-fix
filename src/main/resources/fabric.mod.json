@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "beta-annoyances-fix",
+	"id": "modern-beta-annoyances-fix",
 	"version": "${version}",
-	"name": "Beta Annoyances Fix",
-	"description": "Clientside-only fixes to annoyances and inconsistencies when playing on servers that emulate Beta 1.7.3 mechanics.",
+	"name": "Modern Beta Annoyances Fix",
+	"description": "Clientside-only fixes for gaps the Modern Beta server doesn't/can't enforce, preventing client/server desyncs and annoyances. Not affiliated with or endorsed by Modern Beta LLC.",
 	"authors": [
 		"KeeningDawn"
 	],
@@ -12,22 +12,22 @@
 		"sources": "https://github.com/KeeningDawn/beta-annoyances-fix"
 	},
 	"license": "GPL-3.0-or-later",
-	"icon": "assets/beta-annoyances-fix/icon.png",
+	"icon": "assets/modern-beta-annoyances-fix/icon.png",
 	"environment": "client",
 	"entrypoints": {
 		"main": [
-			"io.github.keeningdawn.betaannoyancesfix.BetaAnnoyancesFix"
+			"io.github.keeningdawn.modernbetaannoyancesfix.ModernBetaAnnoyancesFix"
 		],
 		"client": [
-			"io.github.keeningdawn.betaannoyancesfix.client.BetaAnnoyancesFixClient"
+			"io.github.keeningdawn.modernbetaannoyancesfix.client.ModernBetaAnnoyancesFixClient"
 		],
 		"modmenu": [
-			"io.github.keeningdawn.betaannoyancesfix.client.BetaAnnoyancesFixModMenuIntegration"
+			"io.github.keeningdawn.modernbetaannoyancesfix.client.ModernBetaAnnoyancesFixModMenuIntegration"
 		]
 	},
 	"mixins": [
 		{
-			"config": "beta-annoyances-fix.client.mixins.json",
+			"config": "modern-beta-annoyances-fix.client.mixins.json",
 			"environment": "client"
 		}
 	],

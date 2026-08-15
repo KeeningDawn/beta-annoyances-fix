@@ -26,7 +26,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"beta-annoyances-fix" {
+		"modern-beta-annoyances-fix" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}

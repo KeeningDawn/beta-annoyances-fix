@@ -10,4 +10,4 @@ pluginManagement {
 }
 
 // Should match your modid
-rootProject.name = 'beta-annoyances-fix'
+rootProject.name = 'modern-beta-annoyances-fix'

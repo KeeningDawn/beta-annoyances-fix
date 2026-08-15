@@ -14,23 +14,23 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
-package io.github.keeningdawn.betaannoyancesfix;
+package io.github.keeningdawn.modernbetaannoyancesfix;
 
-import io.github.keeningdawn.betaannoyancesfix.config.BetaAnnoyancesFixConfig;
+import io.github.keeningdawn.modernbetaannoyancesfix.config.ModernBetaAnnoyancesFixConfig;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class BetaAnnoyancesFix implements ModInitializer {
-  public static final String MOD_ID = "beta-annoyances-fix";
+public class ModernBetaAnnoyancesFix implements ModInitializer {
+  public static final String MOD_ID = "modern-beta-annoyances-fix";
 
   public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
   @Override
   public void onInitialize() {
-    BetaAnnoyancesFixConfig.load();
-    LOGGER.info("Beta Annoyances Fix initialized!");
+    ModernBetaAnnoyancesFixConfig.load();
+    LOGGER.info("Modern Beta Annoyances Fix initialized!");
   }
 
   public static Identifier id(String path) {
