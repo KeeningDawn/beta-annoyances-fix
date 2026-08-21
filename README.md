@@ -32,3 +32,7 @@ All fixes are individually toggleable in the config screen if Mod Menu is instal
 - Buttons cannot be placed on the top or bottom of a block.
 - Grass cannot be flattened into paths.
 - Items can no longer be moved to the off-hand slot.
+
+## License
+
+Licensed under [GPL-3.0-or-later](LICENSE)
